@@ -1,0 +1,11 @@
+steps:
+  # Build the container image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/YOUR_PROJECT_ID/my-repo/python-app:latest', '.']
+
+  # Push the image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/analog-gearing-476414-s6/my-repo/python-app:latest']
+
+images:
+  - 'us-central1-docker.pkg.dev/YOanalog-gearing-476414-s6/my-repo/python-app:latest'

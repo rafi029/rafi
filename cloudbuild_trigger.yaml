@@ -1,0 +1,5 @@
+name: "gcs-triggered-build"
+description: "Trigger Cloud Build when GCS bucket is updated"
+pubsubConfig:
+  topic: "projects/analog-gearing-476414-s6/topics/gcs-updates-topic"
+filename: "cloudbuild.yaml"      # The build steps file
